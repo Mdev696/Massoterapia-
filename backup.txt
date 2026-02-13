@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tainá Ribeiro | Massoterapeuta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo Tainá Ribeiro">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="https://wa.me/seunumeroaqui" class="btn-nav">Agendar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Equilíbrio e Bem-Estar para sua <br><span>Saúde</span></h1>
+            <p>Massoterapeuta especializada em proporcionar momentos de relaxamento e recuperação muscular profunda.</p>
+            <div class="hero-buttons">
+                <a href="#servicos" class="cta-button">Ver Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content" id="servicos">
+        <div class="section-title">
+            <h2>Nossos Serviços</h2>
+            <p>Tratamentos personalizados para cada necessidade</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-spa"></i>
+                <h3>Massagem Relaxante</h3>
+                <p>Alívio do estresse e tensão muscular com técnicas suaves e aromaterapia.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Drenagem Linfática</h3>
+                <p>Redução de inchaços e melhora da circulação com movimentos precisos.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-hands"></i>
+                <h3>Ventosa + Relaxante</h3>
+                <p>Técnica que combina ventosa e massagem para aliviar tensões, reduzir dores e promover relaxamento
+                    profundo. 🌿✨</p>
+            </div>
+        </div>
+    </main>
+
+    <section id="sobre" class="about-section" style="padding: 80px 10%; background: #fff;">
+        <div class="about-container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+            <div class="about-text" style="flex: 1; min-width: 300px;">
+                <h2>Sobre Tainá Ribeiro</h2>
+                <p>Com anos de experiência em massoterapia, meu objetivo é promover a saúde integral de cada cliente,
+                    unindo técnica e acolhimento em um ambiente tranquilo.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <p>&copy; 2024 Tainá Ribeiro | Massoterapeuta Profissional</p>
+            <div class="social-links">
+                <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+=============================================================================================================
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+/* --- NAVEGAÇÃO (BARRA SUPERIOR) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 5%;
+    background: #000;
+    /* Fundo Preto para elegância */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* AJUSTE DA LOGO PARA MÁXIMA VISIBILIDADE */
+.logo img {
+    height: 65px;
+    /* Tamanho visível */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    /* Mantém o formato circular */
+    border: 2px solid #fff;
+    /* Borda branca para destacar no fundo preto */
+    background-color: #fff;
+    /* Fundo branco caso a imagem seja transparente */
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cccccc;
+    /* Cinza para os links */
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    /* Branco ao passar o mouse */
+}
+
+/* BOTÃO AGENDAR (DESTAQUE NO MENU) */
+.btn-nav {
+    background: #ffffff;
+    color: #000000 !important;
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: #cccccc;
+}
+
+/* --- HERO SECTION (ÁREA PRINCIPAL COM A FOTO) --- */
+.hero {
+    height: 140vh;
+    /* Mantida a estrutura de altura que você pediu */
+    background: url('perfil.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Escurece a foto para o texto aparecer */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #cccccc;
+    /* Cinza para o destaque "Saúde" */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f0f0f0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 45px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* --- RESPONSIVIDADE (AJUSTE PARA CELULAR) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Esconde os links no mobile conforme sua estrutura */
+    }
+
+    .hero {
+        height: 100vh;
+        /* Ajustado para 100% da tela no celular */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 50px;
+        /* Logo um pouco menor no celular */
+    }
+}
+

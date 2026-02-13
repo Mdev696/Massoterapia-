@@ -1,0 +1,249 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+/* --- NAVEGAÇÃO --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 5%;
+    background: #000;
+    /* Fundo Preto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    /* Logo visível */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    /* Destaque no fundo preto */
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cccccc;
+    /* Cinza */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    /* Branco */
+}
+
+.btn-nav {
+    background: #ffffff;
+    color: #000 !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 140vh;
+    /* Estrutura original mantida */
+    background: url('perfil.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Contraste para o texto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: #cccccc;
+    /* Destaque em Cinza */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #ffffff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* --- SERVIÇOS E CONTEÚDO --- */
+.main-content {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: #000;
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* --- FORMULÁRIO --- */
+.appointment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.appointment-form input,
+.appointment-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+    border-color: #000 !important;
+    outline: none;
+}
+
+/* --- NOVAS REGRAS PARA O AVISO E CHECKBOX --- */
+.aviso-box {
+    display: none;
+    /* O script controla a exibição */
+    background: #f4f4f4;
+    padding: 15px;
+    border-left: 4px solid #000;
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-top: 5px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Esconde menu no mobile */
+    }
+
+    .hero {
+        height: 100vh;
+        /* Ajuste para preencher a tela do celular */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .main-content {
+        padding: 60px 5%;
+    }
+}
