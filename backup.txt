@@ -19,8 +19,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="https://wa.me/seunumeroaqui" class="btn-nav">Agendar</a></li>
+                <li><a href="#agendar">Contato</a></li>
+                <li><a href="#agendar" class="btn-nav">Agendar</a></li>
             </ul>
         </nav>
     </header>
@@ -48,237 +48,161 @@
                 <h3>Massagem Relaxante</h3>
                 <p>Alívio do estresse e tensão muscular com técnicas suaves e aromaterapia.</p>
             </div>
-
             <div class="service-card">
                 <i class="fas fa-hand-holding-heart"></i>
                 <h3>Drenagem Linfática</h3>
                 <p>Redução de inchaços e melhora da circulação com movimentos precisos.</p>
             </div>
-
             <div class="service-card">
                 <i class="fas fa-hands"></i>
-                <h3>Ventosa + Relaxante</h3>
-                <p>Técnica que combina ventosa e massagem para aliviar tensões, reduzir dores e promover relaxamento
-                    profundo. 🌿✨</p>
+                <h3>Ventosa</h3>
+                <p>Técnica que combina ventosa e massagem para aliviar tensões e promover relaxamento profundo. 🌿✨</p>
             </div>
         </div>
     </main>
 
-    <section id="sobre" class="about-section" style="padding: 80px 10%; background: #fff;">
-        <div class="about-container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
-            <div class="about-text" style="flex: 1; min-width: 300px;">
-                <h2>Sobre Tainá Ribeiro</h2>
-                <p>Com anos de experiência em massoterapia, meu objetivo é promover a saúde integral de cada cliente,
-                    unindo técnica e acolhimento em um ambiente tranquilo.</p>
-            </div>
+    <section id="sobre" class="main-content">
+        <div class="section-title">
+            <h2>Sobre Tainá Ribeiro</h2>
+            <p>Com anos de experiência em massoterapia, meu objetivo é promover a saúde integral de cada cliente, unindo
+                técnica e acolhimento em um ambiente tranquilo.</p>
         </div>
     </section>
 
-    <footer id="contato">
-        <div class="footer-content">
-            <p>&copy; 2024 Tainá Ribeiro | Massoterapeuta Profissional</p>
-            <div class="social-links">
-                <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
-            </div>
+    <section id="agendar" class="main-content" style="background: #f9f9f9;">
+        <div class="section-title">
+            <h2>Agendar Atendimento</h2>
+            <p>Preencha os dados abaixo para solicitar seu horário</p>
         </div>
+
+        <form class="appointment-form" id="bookingForm"
+            style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; text-align: left;">
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; font-weight: bold;">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Seu nome completo"
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px;" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; font-weight: bold;">Endereço</label>
+                <input type="text" id="endereco" placeholder="Seu endereço"
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px;" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; font-weight: bold;">Qual tipo de serviço?</label>
+                <select id="servicoSelect"
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px;" required>
+                    <option value="" disabled selected>Escolha uma opção</option>
+
+                    <optgroup label="Pacotes Promocionais">
+                        <option value="Ventosa + Relaxante (R$ 110,00)">Ventosa + Relaxante - R$ 110,00</option>
+                        <option value="Relaxante + Pedras Quentes (R$ 130,00)">Relaxante + Pedras Quentes - R$ 130,00
+                        </option>
+                        <option value="Drenagem + Modeladora (R$ 190,00)">Drenagem Linfática + Modeladora - R$ 190,00
+                        </option>
+                        <option value="Drenagem Linfática (R$ 320,00)">Drenagem Linfática (Pacote) - R$ 320,00</option>
+                    </optgroup>
+
+                    <optgroup label="Massagem">
+                        <option value="Relaxante (R$ 50,00)">Relaxante - R$ 50,00</option>
+                        <option value="Ventosa (R$ 70,00)">Ventosa - R$ 70,00</option>
+                        <option value="Pedras Quentes (R$ 90,00)">Pedras Quentes - R$ 90,00</option>
+                        <option value="Modeladora (R$ 110,00)">Modeladora - R$ 110,00</option>
+                        <option value="Drenagem Linfática (R$ 120,00)">Drenagem Linfática - R$ 120,00</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div id="containerAviso" class="aviso-box"
+                style="display: none; background: #f4f4f4; padding: 15px; border-left: 4px solid #000; margin-bottom: 20px;">
+                <p id="textoAviso" style="color: #333; margin-bottom: 10px; font-size: 0.9rem;"></p>
+                <label style="display: flex; gap: 10px; align-items: flex-start; cursor: pointer; font-weight: bold;">
+                    <input type="checkbox" id="confirmacaoAviso" required style="margin-top: 4px;">
+                    <span style="font-size: 0.85rem;">Estou ciente e concordo com as condições acima.</span>
+                </label>
+            </div>
+
+            <div id="containerPix"
+                style="display: none; margin-bottom: 20px; padding: 15px; border: 2px dashed #000; background: #fff; text-align: center;">
+                <p style="font-weight: bold; margin-bottom: 10px;">💳 Reserva de Horário</p>
+                <p id="textoValorPix" style="font-size: 0.95rem; color: #333; margin-bottom: 15px;"></p>
+
+                <div
+                    style="background: #f4f4f4; padding: 15px; display: inline-block; border-radius: 8px; margin-bottom: 10px;">
+                    <i class="fas fa-qrcode" style="font-size: 80px; color: #000;"></i>
+                    <p style="font-size: 10px; margin-top: 5px; font-weight: bold;">PIX COPIA E COLA</p>
+                </div>
+
+                <p style="font-size: 0.9rem; font-weight: bold;">Chave CPF: 167.426.437-22</p>
+                <p style="font-size: 0.8rem; color: #666; margin-top: 5px;">O agendamento será confirmado após o envio
+                    do comprovante.</p>
+            </div>
+
+            <button type="submit" class="cta-button"
+                style="background: #000; width: 100%; border: none; cursor: pointer; color: #fff; padding: 15px; border-radius: 30px; font-weight: bold; text-transform: uppercase;">Solicitar
+                Agendamento</button>
+        </form>
+    </section>
+
+    <footer id="contato" style="background: #000; color: #fff; padding: 40px; text-align: center;">
+        <p>&copy; 2024 Tainá Ribeiro | Massoterapeuta Profissional</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const servicoSelect = document.getElementById('servicoSelect');
+            const containerAviso = document.getElementById('containerAviso');
+            const textoAviso = document.getElementById('textoAviso');
+            const checkboxAviso = document.getElementById('confirmacaoAviso');
+            const containerPix = document.getElementById('containerPix');
+            const textoValorPix = document.getElementById('textoValorPix');
+            const form = document.getElementById('bookingForm');
+
+            // Função para ler o preço dentro da opção selecionada
+            function extrairPreco(texto) {
+                const match = texto.match(/R\$\s?(\d+,\d{2})/);
+                return match ? parseFloat(match[1].replace(',', '.')) : 0;
+            }
+
+            servicoSelect.addEventListener('change', function () {
+                const selectedOption = this.options[this.selectedIndex];
+                const grupo = selectedOption.parentNode.label;
+                const precoTotal = extrairPreco(selectedOption.text);
+                const valorReserva = (precoTotal * 0.20).toFixed(2).replace('.', ',');
+
+                containerAviso.style.display = "block";
+                containerPix.style.display = "block";
+                checkboxAviso.checked = false;
+
+                textoValorPix.innerHTML = `Para garantir sua vaga, solicitamos o pagamento da reserva de <b>20% (R$ ${valorReserva})</b> via PIX.`;
+
+                if (grupo === "Pacotes Promocionais") {
+                    textoAviso.innerHTML = "✨ <b>Todas as massagens acima são divididas em 3 sessões</b> com duração de 1h cada, no corpo todo! ✨<br><br>Caso queira mais de 3 sessões, me sinalize que fechamos um pacote especial!";
+                } else if (grupo === "Massagem") {
+                    textoAviso.innerHTML = "✨ <b>Todas as massagens acima são baseadas em uma única sessão</b>, sendo 1h de massagem no corpo todo! ✨";
+                }
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const nome = document.getElementById('nome').value;
+                const endereco = document.getElementById('endereco').value;
+                const servico = servicoSelect.value;
+
+                // --- AJUSTE SEU NÚMERO AQUI ---
+                const numeroWhatsApp = "5521990606483";
+
+                const mensagem = `*Novo Agendamento* 📝%0A%0A` +
+                    `*Nome:* ${nome}%0A` +
+                    `*Endereço:* ${endereco}%0A` +
+                    `*Serviço:* ${servico}%0A%0A` +
+                    `_Ciente da reserva de 20% enviando comprovante em seguida._`;
+
+                window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+            });
+        });
+    </script>
 </body>
 
 </html>
-
-
-=============================================================================================================
-/* Configurações Globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    line-height: 1.6;
-    color: #1a1a1a;
-    background-color: #ffffff;
-}
-
-/* --- NAVEGAÇÃO (BARRA SUPERIOR) --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 5%;
-    background: #000;
-    /* Fundo Preto para elegância */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-/* AJUSTE DA LOGO PARA MÁXIMA VISIBILIDADE */
-.logo img {
-    height: 65px;
-    /* Tamanho visível */
-    width: auto;
-    object-fit: contain;
-    border-radius: 50%;
-    /* Mantém o formato circular */
-    border: 2px solid #fff;
-    /* Borda branca para destacar no fundo preto */
-    background-color: #fff;
-    /* Fundo branco caso a imagem seja transparente */
-    transition: transform 0.3s ease;
-    display: block;
-}
-
-.logo img:hover {
-    transform: scale(1.1);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #cccccc;
-    /* Cinza para os links */
-    font-weight: 500;
-    transition: 0.3s;
-    font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-    color: #ffffff;
-    /* Branco ao passar o mouse */
-}
-
-/* BOTÃO AGENDAR (DESTAQUE NO MENU) */
-.btn-nav {
-    background: #ffffff;
-    color: #000000 !important;
-    padding: 8px 22px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-nav:hover {
-    background: #cccccc;
-}
-
-/* --- HERO SECTION (ÁREA PRINCIPAL COM A FOTO) --- */
-.hero {
-    height: 140vh;
-    /* Mantida a estrutura de altura que você pediu */
-    background: url('perfil.jpeg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    color: white;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Escurece a foto para o texto aparecer */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 0 20px;
-    width: 100%;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.hero h1 span {
-    color: #cccccc;
-    /* Cinza para o destaque "Saúde" */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #f0f0f0;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 45px;
-    background: transparent;
-    border: 2px solid #ffffff;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background: #ffffff;
-    color: #000000;
-    transform: scale(1.05);
-}
-
-/* --- CONTEÚDO PRINCIPAL --- */
-.main-content {
-    padding: 100px 10%;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-/* --- RESPONSIVIDADE (AJUSTE PARA CELULAR) --- */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        /* Esconde os links no mobile conforme sua estrutura */
-    }
-
-    .hero {
-        height: 100vh;
-        /* Ajustado para 100% da tela no celular */
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .logo img {
-        height: 50px;
-        /* Logo um pouco menor no celular */
-    }
-}
-

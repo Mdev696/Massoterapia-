@@ -175,6 +175,27 @@ body {
     margin-bottom: 20px;
 }
 
+/* --- IMAGENS --- */
+
+/* Ajuste das Imagens nos Serviços */
+.service-img {
+    width: 100%;
+    height: 200px;
+    /* Altura fixa para manter o padrão */
+    object-fit: cover;
+    /* Faz a imagem preencher o espaço sem distorcer */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* Espaçamento entre a foto e o ícone/texto */
+    display: block;
+}
+
+.service-card {
+    padding: 20px;
+    /* Reduzi levemente o padding para acomodar a foto melhor */
+}
+
+
 /* --- FORMULÁRIO --- */
 .appointment-form {
     max-width: 600px;
